@@ -38,7 +38,7 @@ xx=matrix(c(6, 5, 5, 5, 6, 7, 6, 6, 7, 7, 5, 6, 7, 7, 5, 7,
 colnames(xx)=c("Style","Fiabilité","Consommation","Prix")
 rownames(xx)=c("Renault","Golf","Ford Focus","Peugeot 4070", "Picasso")
 
-# normalisation: lineaire euclidienne
+# normalisation:  euclidienne
 source("https://github.com/Hamrita/MCA/blob/main/Rcodes/normalisation.R")
 normalisee=euclidienne(xx,rep("max",4))
 colnames(normalisee)=colnames(xx)
