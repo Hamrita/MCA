@@ -39,7 +39,7 @@ colnames(xx)=c("Style","Fiabilité","Consommation","Prix")
 rownames(xx)=c("Renault","Golf","Ford Focus","Peugeot 4070", "Picasso")
 
 # normalisation: lineaire euclidienne
-
+source("https://github.com/Hamrita/MCA/blob/main/Rcodes/normalisation.R")
 normalisee=euclidienne(xx,rep("max",4))
 colnames(normalisee)=colnames(xx)
 rownames(normalisee)=rownames(xx)
