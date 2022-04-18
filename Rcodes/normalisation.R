@@ -42,3 +42,17 @@ lineaire2=function(x,crit){
 # x=matrix(c(17000, 22000, 19000, 26000, 15000 , 12, 32, 16, 64, 8),nc=2)
 # lineaire2(x,c("min","max"))
 
+euclidienne=function(x,crit){
+z=matrix(0,nc=NCOL(x), nr=NROW(x))  
+den=sqrt(apply(x^2,2,"sum"))
+for(i in 1:NCOL(x)){
+  if(crit[i]=="max"){
+  z[,i]=x[,i]/den[i]
+  }else{
+    z[,i]=1-(x[,i]/den[i])
+  }
+}
+return(z)
+}
+
+
